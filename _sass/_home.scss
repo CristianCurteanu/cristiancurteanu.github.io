@@ -1,0 +1,18 @@
+/**
+ * Home page styles
+ */
+
+.hero-container {
+  min-height: 600px;
+  height: calc(100vh);
+  background-image: linear-gradient(45deg, #3995ff, #3333);
+
+  .message {
+    padding-top: calc(35vh)
+  }
+}
+
+ion-icon {
+  width: 2em;
+  height: 2em;
+}

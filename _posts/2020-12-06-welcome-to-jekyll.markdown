@@ -4,6 +4,10 @@ title:  "Welcome to Jekyll!"
 date:   2020-12-06 16:41:59 +0200
 categories: jekyll update
 permalink: /rb/first
+description: "An introductory post, just to display the main idea of the post"
+
+categories: ["Intro"]
+tags: ["jekyll", "welcome"]
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

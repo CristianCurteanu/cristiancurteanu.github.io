@@ -1,0 +1,50 @@
+---
+layout: empty
+title: Articles
+permalink: /blog/
+---
+
+<div class="pt-5 mt-5">
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-md-8 gx-5" id="posts-container">
+        {% for post in site.posts %}
+          <div class="row shadow p-5">
+            <a href="{{ post.url }}" class="text-dark">
+              <h3>{{ post.title }}</h3>
+            </a>
+            <p class="text-decoration-underline text-black-50">{{ post.date | date: "%m %b %Y, %I:%M %p" }}</p>
+            <p class="text-dark">{{ post.description }}</p>
+            <a href="{{ post.url }}">Read article</a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="col-md-4 gx-5">
+        <div class="row shadow p-3">
+          <h4>Categories</h4>
+          {% for category in site.categories %}
+            <a href="/blog/?category={{ category | first | downcase }}" class="badge bg-primary w-auto mr-1">{{ category | first }}</a>
+          {% endfor %}
+        </div>
+        <div class="row shadow p-3 mt-3">
+          <h4>Tags</h4>
+          {% for tag in site.tags %}
+            <a href="/blog/?tag={{ tag | first | downcase }}" class="badge badge-pill bg-info w-auto mr-1">{{ tag | first }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log(window.location.href);
+    let url = new URL(window.location.href)
+
+    console.log(url);
+    console.log(url.searchParams.get("q"));
+  })
+</script> -->
+
+<script src="/js/filter.js"></script>

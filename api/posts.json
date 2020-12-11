@@ -1,0 +1,15 @@
+---
+---
+
+[
+  {% for post in site.posts %}
+    {
+      "title": "{{ post.title }}",
+      "description": "{{ post.description | join: " " }}",
+      "url": "{{site.url}}{{ post.permalink }}",
+      "category": "{{ post.category }}",
+      "tags": {{post.tags | jsonify }},
+      "date": "{{ post.date | date: "%m %b %Y, %I:%M %p" }}"
+    }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+]

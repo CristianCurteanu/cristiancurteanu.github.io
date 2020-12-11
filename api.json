@@ -1,0 +1,12 @@
+---
+---
+
+{
+
+  categories: "{{ site.baseurl }}/api/categories.json",
+
+  tags: "{{ site.baseurl }}/api/tags.json",
+
+  posts: "{{ site.baseurl }}/api/posts.json"
+
+}

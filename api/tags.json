@@ -1,0 +1,21 @@
+---
+---
+
+[
+    {% for tag in site.tags %}
+      {
+        "name": "{{ tag[0] | slugify }}",
+        "posts": [
+          {% for post in tag[1] %}
+            {
+              "title": "{{ post.title }}",
+              "description": "{{ post.description | join: " " }}",
+              "url": "{{site.url}}{{ post.permalink }}",
+              "date": "{{ post.date | date: "%m %b %Y, %I:%M %p" }}"
+            }
+            {% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]

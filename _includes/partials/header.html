@@ -6,18 +6,13 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-0 navbar-right justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link text-dark" aria-current="page" href="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="/courses">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="/projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="/about">About</a>
-        </li>
+        {% for page in site.data.pages %}
+          {% if page.display %}
+            <li class="nav-item">
+              <a href="{{ page.path }}" class="nav-link text-dark">{{ page.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </div>

@@ -7,7 +7,7 @@ permalink: /blog/
 <div class="pt-5 mt-5">
   <div class="container p-5">
     <div class="row">
-      <div class="col-md-8 gx-5" id="posts-container">
+      <div class="col-md-8 gx-5 mt-3" id="posts-container">
         {% for post in site.posts %}
           <div class="row shadow p-5">
             <a href="{{ post.url }}" class="text-dark">
@@ -20,7 +20,15 @@ permalink: /blog/
         {% endfor %}
       </div>
       <div class="col-md-4 gx-5">
-        <div class="row shadow p-3">
+        <div class="row shadow p-3 mt-3">
+          <form class="form-inline ml-auto">
+            <div class="w-75">
+              <input id="post-search-bar" class="form-control" type="text" placeholder="Search by keywords" aria-label="Search">
+            </div>
+            <button href="#!" class="btn btn-outline-dark btn-sm mt-1" id="post-search-btn" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="row shadow p-3 mt-3">
           <h4>Categories</h4>
           {% for category in site.categories %}
             <a href="/blog/?category={{ category | first | downcase }}" class="badge bg-primary w-auto mr-1">{{ category | first }}</a>
@@ -37,14 +45,6 @@ permalink: /blog/
   </div>
 </div>
 
-<!-- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    console.log(window.location.href);
-    let url = new URL(window.location.href)
-
-    console.log(url);
-    console.log(url.searchParams.get("q"));
-  })
-</script> -->
-
+<script src="/js/render_post.js"></script>
 <script src="/js/filter.js"></script>
+<script src="/js/post_search.js"></script>

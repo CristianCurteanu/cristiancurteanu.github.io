@@ -8,18 +8,13 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-0 navbar-right justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link text-white" aria-current="page" href="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/courses">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="/about">About</a>
-        </li>
+        {% for pg in site.data.pages %}
+          {% if pg.display %}
+            <li class="nav-item">
+              <a href="{{ pg.path }}" class="nav-link text-white">{{ pg.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </div>

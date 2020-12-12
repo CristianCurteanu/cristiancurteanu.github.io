@@ -51,16 +51,6 @@ ContentFilter.prototype.fetchData = async function() {
 
 ContentFilter.prototype.renderContent = function() {
   let posts = this.data.find(e => e.name === this.searchParams.get(this.type)).posts
-  let content = posts.map(post => {
-    return `
-      <div class="row shadow p-5">
-        <a href="${post.url}" class="text-dark">
-          <h3>${post.title}</h3>
-        </a>
-        <p class="text-decoration-underline text-black-50">${post.date}</p>
-        <p class="text-dark">${post.description}</p>
-        <a href="${post.url}">Read article</a>
-      </div>`
-  }).join()
+  let content = posts.map(post => renderPost(post)).join("")
   this.postsContainer.innerHTML = content
 }

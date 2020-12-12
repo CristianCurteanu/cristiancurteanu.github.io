@@ -10,12 +10,22 @@ permalink: /blog/
       <div class="col-md-8 gx-5 mt-3" id="posts-container">
         {% for post in site.posts %}
           <div class="row shadow p-5">
-            <a href="{{ post.url }}" class="text-dark">
-              <h3>{{ post.title }}</h3>
-            </a>
+            {% if post.external_url %}
+              <a href="{{ post.external_url }}" target="_blank" class="text-dark">
+                <h3>{{ post.title }}</h3>
+              </a>
+            {% else %}
+              <a href="{{ post.url }}" class="text-dark">
+                <h3>{{ post.title }}</h3>
+              </a>
+            {% endif %}
             <p class="text-decoration-underline text-black-50">{{ post.date | date: "%m %b %Y, %I:%M %p" }}</p>
             <p class="text-dark">{{ post.description }}</p>
-            <a href="{{ post.url }}">Read article</a>
+            {% if post.external_url %}
+              <a href="{{ post.external_url }}" target="_blank">Read article</a>
+            {% else %}
+              <a href="{{ post.url }}">Read article</a>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
@@ -31,13 +41,13 @@ permalink: /blog/
         <div class="row shadow p-3 mt-3">
           <h4>Categories</h4>
           {% for category in site.categories %}
-            <a href="/blog/?category={{ category | first | downcase }}" class="badge bg-primary w-auto mr-1">{{ category | first }}</a>
+            <a href="/blog/?category={{ category | first | downcase | replace: " ", "-" }}" class="badge bg-primary w-auto mr-1 mt-1">{{ category | first }}</a>
           {% endfor %}
         </div>
         <div class="row shadow p-3 mt-3">
           <h4>Tags</h4>
           {% for tag in site.tags %}
-            <a href="/blog/?tag={{ tag | first | downcase }}" class="badge badge-pill bg-info w-auto mr-1">{{ tag | first }}</a>
+            <a href="/blog/?tag={{ tag | first | downcase }}" class="badge badge-pill bg-info w-auto mr-1 mt-1">{{ tag | first }}</a>
           {% endfor %}
         </div>
       </div>

@@ -115,7 +115,24 @@ permalink: /
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-4 p-5 text-center">
-        <h2>Latest articles</h2>
+        <h2 class="text-decoration-underline">Latest articles</h2>
+      </div>
+      <div class="row justify-content-center pb-4">
+        {% for post in site.posts limit:3 %}
+        <div class="card col-md-3 mr-1 ml-1">
+          <div class="card-body">
+            <h5 class="card-title border-bottom pb-4 text-center">{{ post.title }}</h5>
+            <p class="card-text">{{ post.description }}</p>
+          </div>
+          <div class="card-footer bg-none border-0 text-center">
+            {% if post.external_url %}
+              <a href="{{ post.external_url }}" target="_blank" class="card-link">Read article</a>
+            {% else %}
+              <a href="{{ post.url }}" class="card-link">Read article</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
     <div class="row justify-content-center">

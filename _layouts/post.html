@@ -19,6 +19,14 @@
                   <p>
                     {{ page.date | date: "%m %b %Y" }}
                   </p>
+                  <div class="p-1">
+                    <a target="_blank" class="text-white" rel="noopener noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG" title="Share on Linkedin">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a target="_blank" class="text-white" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url={{site.url}}{{ post.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}" title="Share on Twitter">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </div>
                 </header>
               </div>
             </div>
@@ -36,6 +44,14 @@
           <p>
             {{ page.date | date: "%m %b %Y" }}
           </p>
+          <div class="p-1">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG" title="Share on Linkedin">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url={{site.url}}{{ post.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}" title="Share on Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </div>
         </header>
       {% endunless %}
 
@@ -43,14 +59,13 @@
         {{ content }}
         <div class="row justify-content-end">
           <div class="p-1">
-          <div class="badge bg-primary">
-            <a target="_blank" class="pb-0 text-white" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG" title="Share on Linkedin">
               <ion-icon name="logo-linkedin"></ion-icon>
-              <span class="position-relative share-adj">Share</span>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url={{site.url}}{{ post.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}" title="Share on Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </div>
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="{{ page.title }}" data-url="{{site.url}}{{ post.permalink }}" data-size="large" data-via="CristiCurteanu" data-hashtags="{{ page.tags | join: "," }}" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
         </div>
       </article>
     </div>

@@ -13,10 +13,10 @@ permalink: /
         <div class="col-lg-5 text-center">
           <h1 class="text-white">Hello! I am Cristian</h1>
           <p class="text-white">
-            I can help your business to grow in the Clouds
+            Let's grow your business in the Clouds
           </p>
           <a href="#customer-problem" class="btn btn-outline-light">
-            Let's get started
+            Start here
           </a>
         </div>
       </div>
@@ -33,15 +33,19 @@ permalink: /
   <div class="row justify-content-lg-evenly">
     <div class="col-md-3">
       <h3 class="pb-4 border-bottom">Build an MVP</h3>
-      <p>As a startup, you probably want a robust product that is easy to maintain, ideally by a single person. Using cloud solutions have been proved reliable and secure, and a single person is capable to maintain the entire infrastructure.</p>
+      <p>
+        As a startup you need a reliable product fast. Thanks to Cloud technologies, a maintainable MVP can be build in no time, and still leverage security, reliability, and small operational costs.
+      </p>
     </div>
     <div class="col-md-3">
-      <h3 class="pb-4 border-bottom">Extend and Automate</h3>
-      <p>As a startup, you probably want a robust product that is easy to maintain, ideally by a single person. Using cloud solutions have been proved reliable and secure, and a single person is capable to maintain the entire infrastructure.</p>
+      <h3 class="pb-4 border-bottom">Maintain and Extend</h3>
+      <p>
+        As a startup, there is a constant need to pivot fast to another version of a product. Most of the times, a monolith application, especially poorly designed, will require more time to iterate to another version. On the other hand, if you need to iterate fast on your software features, Cloud technologies can be a good choice
+      </p>
     </div>
     <div class="col-md-3">
-      <h3 class="pb-4 border-bottom">Optimize the costs</h3>
-      <p>You can achieve a smaller costs, by using specific services from cloud providers.</p>
+      <h3 class="pb-4 border-bottom">Automate and Optimize</h3>
+      <p>It is always good for a company to have a big part of processes automated, and to have low operational costs. With AWS Cloud technologies, both are real, since there are good tools to make all product processes automated, and leverage on demand billing for your service to operate</p>
     </div>
   </div>
 </div>
@@ -56,17 +60,14 @@ permalink: /
         <form action="/contact" method="post">
           <div class="row">
             <div class="mb-3 col-md-6">
-              <!-- <label for="email" class="text-white form-label">Email address</label> -->
               <input type="email" class="form-control" id="email" placeholder="Your email (name@example.com)">
             </div>
             <div class="mb-3 col-md-6">
-              <!-- <label for="full-name" class="text-white form-label">Full name</label> -->
               <input type="email" class="form-control" id="full-name" placeholder="Your name, ex. John Doe">
             </div>
           </div>
           <div class="row">
             <div class="mb-3">
-              <!-- <label for="message" class="text-white form-label">Example textarea</label> -->
               <textarea class="form-control" id="message" rows="5" placeholder="Leave your message"></textarea>
             </div>
           </div>
@@ -91,15 +92,7 @@ permalink: /
     </div>
     <div class="row justify-content-lg-end">
       <div class="col-md-6 px-2">
-        <p class="text-white">
-          Hello! My name is Cristian. I am a software engineer with 6+ years experience of software development, mostly back-end.
-        </p>
-        <p class="text-white">
-          Recent enough I was involved into a project, which was built entirely on an AWS stack. That is where I just fell in love with cloud technologies, and how it makes life easier for engineers and businesses.
-        </p>
-        <p class="text-white">
-          I decided to go fully into AWS Cloud, as it does provide all the tools to easily build and maintain software on a easily automated infrastructure, that comes along with a lot of features, including reliability, security and resilience.
-        </p>
+        {% include contents/intro.html class="text-white" %}
         <a href="#contact-form" class="btn btn-outline-light">
           Let's get in touch
         </a>

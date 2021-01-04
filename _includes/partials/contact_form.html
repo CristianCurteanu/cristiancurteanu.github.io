@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+  <div class="col-md-8 p-5 text-center">
+    <h3 class="text-white">
+      ... Let's get in touch
+    </h3>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Thank you!</strong> I will contact you back as soon as possible!
+      <a type="button" class="close pl-2 text-black-50" data-dismiss="alert" aria-label="Close">
+        <strong>
+          <span aria-hidden="true">&times;</span>
+        </strong>
+      </a>
+    </div>
+    <form id="email-contact-form" action-url="{{ site.contact_form_url }}/emails/send">
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <input type="email" class="form-control" placeholder="Your email (name@example.com)" id="contact-form_email">
+        </div>
+        <div class="mb-3 col-md-6">
+          <input type="text" class="form-control" placeholder="Your name, ex. John Doe" id="contact-form_fullname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Subject" id="contact-form_subject">
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3">
+          <textarea class="form-control" rows="5" placeholder="Leave your message" id="contact-form_content"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 text-left">
+          <!-- <input type="submit" value="Send message" class="btn btn-outline-light">
+          <span class="spinner-border text-light" id="form-spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </span> -->
+          <div class="btn btn-outline-light" id="form-submit">
+            Send message
+            <span class="spinner-border text-light spinner-border-sm" id="form-spinner" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/contact_email_request.js"></script>

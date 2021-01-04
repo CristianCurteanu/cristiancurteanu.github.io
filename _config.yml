@@ -24,6 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: CristiCurteanu
 github_username:  CristianCurteanu
 highlighter: rouge
+contact_form_url: https://ccurteanu-web-mailer.herokuapp.com
 
 # Build settings
 markdown: kramdown

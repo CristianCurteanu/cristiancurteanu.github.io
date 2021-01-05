@@ -1,20 +1,61 @@
-.post-cover {
-  min-height: calc(75vh) !important;
-  color: #fff;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: fixed;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
+// .post-cover {
+//   min-height: calc(75vh) !important;
+//   color: #fff;
+//   background-position-x: center;
+//   background-position-y: center;
+//   background-size: cover;
+//   background-repeat-x: no-repeat;
+//   background-repeat-y: no-repeat;
+//   background-attachment: fixed;
+//   background-origin: initial;
+//   background-clip: initial;
+//   background-color: initial;
 
-  .message {
-    padding-top: calc(35vh)
-  }
-}
+//   .message {
+//     padding-top: calc(35vh)
+//   }
+// }
+
+
+.post-cover {
+  background-size: cover;
+  background-position: top center;
+  position: relative; }
+  .post-cover.overlay:before {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .post-cover, .post-cover .same-height {
+    padding: 7em 0; }
+  .post-cover .post-entry .post-meta {
+    color: #fff;
+    font-size: 13px; }
+    .post-cover .post-entry .post-meta .author-figure img {
+      width: 30px;
+      border-radius: 50%; }
+  .post-cover .post-entry h2 {
+    font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #fff; }
+    @media (min-width: 992px) {
+      .post-cover .post-entry h2 {
+        font-size: 3rem; } }
+    .post-cover .post-entry h2 a {
+      color: #fff; }
+  .post-cover.single-page h1 {
+    font-size: 2rem;
+    color: #fff; }
+    @media (min-width: 992px) {
+      .post-cover.single-page h1 {
+        font-size: 5rem; } }
+    .post-cover.single-page h1 a {
+      color: #fff; }
+
 
 .share-adj {
   position: relative;

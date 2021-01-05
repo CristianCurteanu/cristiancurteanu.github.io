@@ -5,37 +5,32 @@
 
   <body>
     {% include partials/header.html %}
-
-    {% if page.cover %}
-      <div style="background-image: url({{ page.cover }})" class="post-cover">
-        <div class="container">
-          <div class="message">
-            <div class="row justify-content-center">
-              <div class="col-lg-5 text-center">
-                <header>
-                  <h1 class="text-decoration-underline">
-                    {{ page.title }}
-                  </h1>
-                  <p>
-                    {{ page.date | date: "%m %b %Y" }}
-                  </p>
-                  <div class="p-1">
-                    <a target="_blank" class="text-white" rel="noopener noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG" title="Share on Linkedin">
-                      <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                    <a target="_blank" class="text-white" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url={{site.url}}{{ post.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}" title="Share on Twitter">
-                      <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                  </div>
-                </header>
+    <div class="post-cover post-cover-sm same-height single-page" style="background-image: url({{ page.cover }})">
+      <div class="container">
+        <div class="row same-height justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <div class="post-entry text-center">
+              <h1 class="text-decoration-underline">
+                {{ page.title }}
+              </h1>
+              <p class="text-light">
+                {{ page.date | date: "%m %b %Y" }}
+              </p>
+              <div class="p-1">
+                <a target="_blank" class="text-white" rel="noopener noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG" title="Share on Linkedin">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a target="_blank" class="text-white" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url={{site.url}}{{ post.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}" title="Share on Twitter">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    {% endif %}
+    </div>
 
-    <div class="container mt-5 p-5">
+    <div class="container mt-5">
       {% unless page.cover %}
         <header>
           <h1 class="text-decoration-underline">
@@ -69,7 +64,6 @@
         </div>
       </article>
     </div>
-
     {% include partials/footer.html %}
     {% include embeds/ga.html %}
   </body>

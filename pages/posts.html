@@ -41,13 +41,13 @@ permalink: /blog/
         <div class="row shadow p-3 mt-3">
           <h4>Categories</h4>
           {% for category in site.categories %}
-            <a href="/blog/?category={{ category | first | downcase | replace: " ", "-" }}" class="badge bg-primary w-auto mr-1 mt-1">{{ category | first }}</a>
+            <a href="/blog/?category={{ category | first | downcase | replace: " ", "-" }}" class="badge text-light bg-primary w-auto mr-1 mt-1">{{ category | first }}</a>
           {% endfor %}
         </div>
         <div class="row shadow p-3 mt-3">
           <h4>Tags</h4>
           {% for tag in site.tags %}
-            <a href="/blog/?tag={{ tag | first | downcase }}" class="badge badge-pill bg-info w-auto mr-1 mt-1">{{ tag | first }}</a>
+            <a href="/blog/?tag={{ tag | first | downcase }}" class="badge badge-pill bg-info w-auto mr-1 mt-1  text-light">{{ tag | first }}</a>
           {% endfor %}
         </div>
       </div>

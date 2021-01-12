@@ -52,8 +52,13 @@
 
       <article>
         {{ content }}
+        <div class="row p-3 mt-2 mb-5">
+          {% for tag in page.tags %}
+            <a href="/blog/?tag={{ tag | downcase }}" class="badge badge-pill bg-info w-auto mr-1 mt-1 text-light">{{ tag }}</a>
+          {% endfor %}
+        </div>
         <div class="row justify-content-end">
-          <div>
+          <div class="share-buttons">
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG" title="Share on Linkedin">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>

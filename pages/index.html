@@ -15,64 +15,10 @@ permalink: /
           <p class="text-white" style="font-size: 19pt;">
             Let's grow your business in the Clouds
           </p>
-          <a href="#customer-problem" class="btn btn-primary text-light" style="font-weight: bold;">
+          <a href="#about-me" class="btn btn-primary text-light" style="font-weight: bold;">
             Start here
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container mb-5" id="customer-problem">
-  <div class="row justify-content-center">
-    <div class="col-md-5 text-center p-5">
-      <h2>If you want to...</h2>
-    </div>
-  </div>
-  <div class="row justify-content-lg-evenly">
-    <div class="col-md-3">
-      <h3 class="pb-4 border-bottom">Build an MVP</h3>
-      <p>
-        As a startup you need a reliable product fast. Thanks to Cloud technologies, a maintainable MVP can be build in no time, and still leverage security, reliability, and small operational costs.
-      </p>
-    </div>
-    <div class="col-md-3">
-      <h3 class="pb-4 border-bottom">Maintain and Extend</h3>
-      <p>
-        As a startup, there is a constant need to pivot fast to another version of a product. Most of the times, a monolith application, especially poorly designed, will require more time to iterate to another version. On the other hand, if you need to iterate fast on your software features, Cloud technologies can be a good choice
-      </p>
-    </div>
-    <div class="col-md-3">
-      <h3 class="pb-4 border-bottom">Automate and Optimize</h3>
-      <p>It is always good for a company to have a big part of processes automated, and to have low operational costs. With AWS Cloud technologies, both are real, since there are good tools to make all product processes automated, and leverage on demand billing for your service to operate</p>
-    </div>
-  </div>
-</div>
-
-<div class="bg-dark" id="contact-form">
-  <div class="container">
-    {% include partials/contact_form.html %}
-  </div>
-</div>
-
-
-<div class="bg-theme-darker pb-5">
-  <div class="container pb-5">
-    <div class="row justify-content-center">
-      <div class="col-md-4 p-5 text-center">
-        <h2 class="text-white">About me</h2>
-      </div>
-    </div>
-    <div class="row justify-content-lg-end">
-      <div class="col-md-6 px-2">
-        {% include contents/intro.html class="text-white" %}
-        <a href="#contact-form" class="btn btn-outline-light">
-          Let's get in touch
-        </a>
-      </div>
-      <div class="col-md-5">
-        <img src="/public/me.png" alt="Cristian Curteanu: software engineer" class="rounded-circle img-fluit">
       </div>
     </div>
   </div>
@@ -110,6 +56,34 @@ permalink: /
   </div>
 </div>
 
+<div class="bg-theme-darker pb-5" id="about-me">
+  <div class="container pb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4 p-5 text-center">
+        <h2 class="text-white">About me</h2>
+      </div>
+    </div>
+    <div class="row justify-content-lg-end">
+      <div class="col-md-6 px-2">
+        {% include contents/intro.html class="text-white" %}
+        <a href="#contact-form" class="btn btn-outline-light">
+          Let's get in touch
+        </a>
+      </div>
+      <div class="col-md-5">
+        <img src="/public/me.png" alt="Cristian Curteanu: software engineer" class="rounded-circle img-fluit">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-dark" id="contact-form">
+  <div class="container">
+    {% include partials/contact_form.html %}
+  </div>
+</div>
+
+{% if site.data.pages[2].display %}
 <div class="bg-theme-base p-5">
   <div class="container">
     <div class="row justify-content-center">
@@ -119,3 +93,4 @@ permalink: /
     </div>
   </div>
 </div>
+{% endif %}

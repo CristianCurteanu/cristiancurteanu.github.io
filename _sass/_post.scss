@@ -1,22 +1,3 @@
-// .post-cover {
-//   min-height: calc(75vh) !important;
-//   color: #fff;
-//   background-position-x: center;
-//   background-position-y: center;
-//   background-size: cover;
-//   background-repeat-x: no-repeat;
-//   background-repeat-y: no-repeat;
-//   background-attachment: fixed;
-//   background-origin: initial;
-//   background-clip: initial;
-//   background-color: initial;
-
-//   .message {
-//     padding-top: calc(35vh)
-//   }
-// }
-
-
 .post-cover {
   background-size: cover;
   background-position: top center;
@@ -60,4 +41,27 @@
 .share-adj {
   position: relative;
   top: -7pt
+}
+
+.share-buttons {
+  display: grid;
+  position: fixed;
+  top: 47%;
+  left: 0%;
+  background: white;
+  padding: 6pt;
+  width: 41pt;
+}
+
+@media only screen and (max-width: 720px) {
+  .share-buttons {
+    display: inherit;
+    position: fixed;
+    top: 94%;
+    left: 0%;
+    background: white;
+    padding-left: 50%;
+    width: 100%;
+    padding: 6pt 0 6pt 40%;
+  }
 }

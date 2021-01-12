@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Design patterns in Go: Abstract Factory"
-date:   2020-12-13 16:41:59 +0200
+date:   2021-01-03T16:41:59Z
 permalink: /blog/go/abstract-factory-pattern
 description: "Let's take a brief look on how we can benefit from Abstract Factory Design pattern, by solving a real world problem"
 
-categories: ["Software engineering"]
+categories: ["Software engineering", "Golang"]
 tags: ["go", "golang", "abstract-factory", "design-patterns"]
 cover: https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1800&q=80
 ---

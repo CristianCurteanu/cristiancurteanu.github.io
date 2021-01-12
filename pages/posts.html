@@ -19,7 +19,7 @@ permalink: /blog/
                 <h3>{{ post.title }}</h3>
               </a>
             {% endif %}
-            <p class="text-decoration-underline text-black-50">{{ post.date | date: "%m %b %Y, %I:%M %p" }}</p>
+            <p class="text-decoration-underline text-black-50">{{ post.date | date: "%b %Y, %I:%M %p" }}</p>
             <p class="text-dark">{{ post.description }}</p>
             {% if post.external_url %}
               <a href="{{ post.external_url }}" target="_blank">Read article</a>

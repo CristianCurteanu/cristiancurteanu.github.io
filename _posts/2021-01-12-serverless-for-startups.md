@@ -64,8 +64,16 @@ For the example provided, the cost calculation was made for 1.000.000 requests p
 
 To solve this issue, the functions can be redesigned, so that there will be less calls to lambda functions made, or to optimize allocated resources with which functions are configured to operate with (the costs will drop significantly, if there are redundant resources allocated).
 
+Of course when setting up a container based architecture, the costs will also grow linearly, however the bootstrap costs are much higher than in case of a serverless architecture. However the slope is much lower when traffic increases.
+
+
+
+
+
 ### Conclusion
 
-Taking in consideration that a serverless app can be designed with DDD in mind, and can be extremely modular, the pivoting can be done very easily, which is crucial for a startup. Also, taking in account that for a tech startup the most expensive resource are experience and knowledge of engineers, going cloud is a very good choice, since there are not so many people requied to develop and maintain a system.
+Taking in consideration that a serverless app can be designed with DDD in mind, and can be extremely modular, the pivoting can be done very easily, which is crucial for a startup. Also, taking in account that for a tech startup the most expensive resource are experience and knowledge of engineers, going serverless is a very good choice, since the resources required to maintain and run it at a moderate traffic are reasonable
 
-And of course resilience and security provided by cloud providers will guarantee that your app will run (unless there will be bugs in application code, that will crash one, or some more, functions)
+And of course resilience and security provided by cloud providers will guarantee that your app will run (unless there will be bugs in application code, that will crash one, or some more, functions).
+
+However, if you are targeting a much higher traffic, then you should think twice before going serverless. Even though, with a higher traffic, I still think that the operating costs are negligible, but the advantage of a cloud provider taking care of inner details for managing the servers infrastructure, will save you much more resources in a long run.

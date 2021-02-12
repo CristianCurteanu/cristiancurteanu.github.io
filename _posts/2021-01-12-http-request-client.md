@@ -49,6 +49,8 @@ let httpRequest = function(method, url, { headers, body, options } = {}) {
 
 As we can see here, the function receives the HTTP method and URL as required parameters. After creating the basic objects it needs to operate with, it sends the request. The function is returning a promise, that wraps the event callbacks for `xhr` request object. When a specific event is triggered, the promise resolvers are sending wrapped values of `HttpResponse` and `HttpError`.
 
+As a side note, here was also enabled the CORS, by setting the `withCredentials` to a `true` value; which means that it should be enabled on the server as well, in order to execute requests properly.
+
 Now, we will define the `HttpResponse` prototypes:
 
 ```javascript

@@ -53,13 +53,13 @@ layout: default
         <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
             Share this article on
         </p>
-        <a class="ml-3 {{ include.class | default: "text-gray-500" }}" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{ post.permalink }}&amp;title={{ page.title }}&amp;summary={{ page.description }}&amp;source=BLOG">
+        <a class="ml-3 {{ include.class | default: "text-gray-500" }}" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/&amp;url={{site.url}}{{ page.permalink }}">
             <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
               <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
               <circle cx="4" cy="4" r="2" stroke="none"></circle>
             </svg>
           </a>
-        <a class="ml-3 {{ include.class | default: "text-gray-500" }}" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?url={{site.url}}{{ post.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}">
+        <a class="ml-3 {{ include.class | default: "text-gray-500" }}" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?url={{site.url}}{{ page.permalink }}&text=&quot;{{ page.title }}&quot; by @{{ site.twitter_username }}&hashtags={{ page.tags | join: "," }}">
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
           </svg>

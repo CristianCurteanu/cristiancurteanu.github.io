@@ -1,12 +1,9 @@
 - name: Blog
   path: /blog
   display: true
-- name: Videos
-  path: /videos
-  display: false
 - name: Projects
   path: /projects
-  display: false
+  display: true
 - name: About
   path: /about
   display: true

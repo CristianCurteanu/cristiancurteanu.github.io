@@ -1,96 +1,55 @@
 ---
-title: Home
-layout: blank
+layout: default
+title: "Hi! I am Cristian Curteanu"
 permalink: /
 ---
 
-{% include partials/landing-header.html %}
-
-<div class="hero-container overlay">
-  <div class="container">
-    <div class="message">
-      <div class="row justify-content-center">
-        <div class="text-center">
-          <h1 class="text-white" style="font-size: 45pt;">Hello! I am Cristian</h1>
-          <p class="text-white" style="font-size: 19pt;">
-            I am crafting tools, that helps to solve people's problems.
+<div class="flex flex-col h-screen">
+  <div class="bg-gradient-to-r from-indigo-300 via-purple-400 to-indigo-400 flex justify-center items-center flex-grow">
+    <section class="text-gray-600 body-font pt-[7vh] pb-[15vh]">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center h-full">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-1/2">
+          <img class="object-cover object-center rounded-full" alt="hero" src="/public/me.png">
+        </div>
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Hi!
+            <br class="hidden lg:inline-block">I am Cristian.
+          </h1>
+          <p class="mb-8 leading-relaxed text-white">
+            As a seasoned software engineer with a proven track record of delivering high-quality products, I have spent the last decade honing my skills and building my knowledge in the industry. 
+            My areas of expertise include designing and implementing scalable and fault-tolerant systems, building high-performance applications, and optimizing workflows for efficiency and speed.
           </p>
-          <a href="#about-me" class="btn btn-primary text-light" style="font-weight: bold;">
-            Start here
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="blog-posts" class="mb-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-4 p-5 text-center">
-        <h2 class="text-decoration-underline">Latest articles</h2>
-      </div>
-      <div class="row justify-content-center pb-4">
-        {% for post in site.posts limit:3 %}
-        <div class="card col-md-3 mr-1 ml-1">
-          <div class="card-body">
-            <h5 class="card-title border-bottom pb-4 text-center">{{ post.title }}</h5>
-            <p class="card-text">{{ post.description }}</p>
+        
+          <div class="flex justify-center">
+            <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Let's talk</button>
+            <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">About me</button>
           </div>
-          <div class="card-footer bg-none border-0 text-center">
-            {% if post.external_url %}
-              <a href="{{ post.external_url }}" target="_blank" class="card-link">Read article</a>
-            {% else %}
-              <a href="{{ post.url }}" class="card-link">Read article</a>
-            {% endif %}
+
+          <div class="flex justify-center mt-7">
+            {% include components/social_media.html class="text-gray-200" %}
           </div>
         </div>
-        {% endfor %}
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-2 text-center">
-        <a href="/blog" class="btn btn-outline-primary">See all articles</a>
-      </div>
-    </div>
+    </section>
   </div>
 </div>
 
-<div class="bg-theme-darker pb-5" id="about-me">
-  <div class="container pb-5">
-    <div class="row justify-content-center">
-      <div class="col-md-4 p-5 text-center">
-        <h2 class="text-white">About me</h2>
-      </div>
-    </div>
-    <div class="row justify-content-lg-end">
-      <div class="col-md-6 px-2">
-        {% include contents/intro.html class="text-white" %}
-        <a href="/about" class="btn btn-light">
-          Learn more
-        </a>
-      </div>
-      <div class="col-md-5">
-        <img src="/public/me.png" alt="Cristian Curteanu: software engineer" class="rounded-circle img-fluit">
-      </div>
-    </div>
-  </div>
-</div>
+<!-- About me section -->
+{% include sections/about.html %}
 
-<div class="bg-dark" id="contact-form">
-  <div class="container">
-    {% include partials/contact_form.html %}
-  </div>
-</div>
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
 
-{% if site.data.pages[2].display %}
-<div class="bg-theme-base p-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="text-center">
-        <h2 class="text-black-50">Projects</h2>
-      </div>
-    </div>
-  </div>
-</div>
-{% endif %}
+<!-- Latest Posts section -->
+{% include sections/latest_posts.html bg="bg-gray-100" %}
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+<!-- Projects section -->
+<!-- {% include sections/projects.html bg="" %} -->
+
+<!-- <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"> -->
+
+<!-- Contact -->
+{% include sections/contact_form.html %}
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">

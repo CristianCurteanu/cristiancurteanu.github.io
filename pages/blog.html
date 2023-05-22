@@ -1,0 +1,95 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="container px-6 py-10 mx-auto mt-[75pt]">
+    <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
+        Blog posts
+    </h1>
+
+    <div class="container">
+
+    </div>
+
+    <div id="posts-container" class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 mt-[25pt]">
+        {% for post in site.posts %}
+            <div class="lg:flex"> 
+                {% if post.cover %}
+                    <img src="{{ post.cover }}" class="object-cover w-full h-56 rounded-lg lg:w-64" alt="">
+
+                {% endif %}
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="{{ post.permalink }}" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        {{ post.title }}
+                    </a>
+                    <p>
+                        {{ post.description }}
+                    </p>
+                    <span class="text-sm text-gray-500 dark:text-gray-300">
+                        {{ post.date | date:  "%-d %B %Y" }}
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- <div class="pt-5 mt-5">
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-md-8 gx-5 mt-3" id="posts-container">
+        {% for post in site.posts %}
+          <div class="row shadow p-5 mb-3">
+            {% if post.external_url %}
+              <a href="{{ post.external_url }}" target="_blank" class="text-dark">
+                <h3>{{ post.title }}</h3>
+              </a>
+            {% else %}
+              <a href="{{ post.url }}" class="text-dark">
+                <h3>{{ post.title }}</h3>
+              </a>
+            {% endif %}
+            <p class="text-decoration-underline text-black-50">{{ post.date | date: "%b %Y, %I:%M %p" }}</p>
+            <p class="text-dark">{{ post.description }}</p>
+            {% if post.external_url %}
+              <a href="{{ post.external_url }}" target="_blank">Read article</a>
+            {% else %}
+              <a href="{{ post.url }}">Read article</a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div> -->
+
+
+
+      <!-- <div class="col-md-4 gx-5">
+        <div class="row shadow p-3 mt-3">
+          <form class="form-inline ml-auto">
+            <div class="w-75">
+              <input id="post-search-bar" class="form-control" type="text" placeholder="Search by keywords" aria-label="Search">
+            </div>
+            <button href="#!" class="btn btn-outline-dark btn-sm mt-1" id="post-search-btn" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="row shadow p-3 mt-3">
+          <h4>Categories</h4>
+          {% for category in site.categories %}
+            <a href="/blog/?category={{ category | first | downcase | replace: " ", "-" }}" class="badge text-light bg-primary w-auto mr-1 mt-1">{{ category | first }}</a>
+          {% endfor %}
+        </div>
+        <div class="row shadow p-3 mt-3">
+          <h4>Tags</h4>
+          {% for tag in site.tags %}
+            <a href="/blog/?tag={{ tag | first | downcase }}" class="badge badge-pill bg-info w-auto mr-1 mt-1  text-light">{{ tag | first }}</a>
+          {% endfor %}
+        </div>
+      </div> -->
+    <!-- </div>
+  </div>
+</div> -->
+
+<script src="/assets/scripts/render_post.js"></script>
+<script src="/assets/scripts/filter.js"></script>
+<script src="/assets/scripts/post_search.js"></script>

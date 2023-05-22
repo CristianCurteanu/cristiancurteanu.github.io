@@ -1,0 +1,43 @@
+<div class="flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="flex justify-around py-4 bg-white/80
+        backdrop-blur-md shadow-md w-full
+        fixed top-0 left-0 right-0 z-10">
+
+        <!-- Logo Container -->
+        <div class="flex items-center">
+            <!-- Logo -->
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img src="/public/me.png" class="rounded-full w-15 h-[45pt]" alt="">
+                <span class="ml-3 text-xl"> {{ site.title }} </span>
+            </a>
+        </div>
+
+        <!-- Links Section -->
+        <div class="items-center hidden space-x-8 lg:flex">
+            
+        </div>
+
+        <!-- Icon Menu Section -->
+        <div class="flex items-center space-x-5">
+            {% for page in site.data.pages %}
+                {% if page.display %}
+                <a class="flex text-gray-600 hover:text-blue-500
+                    cursor-pointer transition-colors duration-300"
+                    href="{{ page.path }}" >
+                    {{ page.name }}
+                </a>
+                {% endif %}
+            {% endfor %}
+            <!-- Login -->
+            <a class="flex text-gray-600 
+                cursor-pointer transition-colors duration-300
+                font-semibold text-blue-600"
+                href="/contacts">
+
+                Let's talk!
+            </a>
+        </div>
+    </nav>
+</div>

@@ -54,3 +54,22 @@ ContentFilter.prototype.renderContent = function() {
   let content = posts.map(post => renderPost(post)).join("")
   this.postsContainer.innerHTML = content
 }
+
+
+const button = document.querySelector('[data-collapse-toggle]');
+const menu = document.querySelector('#' + button.dataset.collapseToggle);
+
+
+button.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
+
+
+(function () {
+  var width = window.innerWidth;
+
+  window.addEventListener('resize', function () {
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+    console.log('ev :>> ', ev);
+  });
+})();

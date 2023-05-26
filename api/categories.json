@@ -10,7 +10,7 @@
           {
             "title": "{{ post.title }}",
             "description": "{{ post.description | join: " " }}",
-            "cover": "{{ post.cover }}",
+            "cover": "{{ post.image }}",
           {% if post.external_url %}
             "url": "{{ post.external_url }}",
             "target": "_blank",

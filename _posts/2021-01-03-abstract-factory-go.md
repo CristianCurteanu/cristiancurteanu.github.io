@@ -7,7 +7,7 @@ description: "Let's take a brief look on how we can benefit from Abstract Factor
 
 categories: ["Software engineering", "Golang"]
 tags: ["go", "golang", "abstract-factory", "design-patterns"]
-cover: https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1800&q=80
+image: https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1800&q=80
 ---
 
 

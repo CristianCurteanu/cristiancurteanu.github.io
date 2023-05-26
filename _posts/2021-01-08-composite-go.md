@@ -6,7 +6,7 @@ permalink: /blog/go/composite-design-pattern
 description: "Here we will see how Composite design pattern can be implemented and used"
 categories: ["Software engineering", "Golang"]
 tags: ["go", "golang", "composite", "design-patterns"]
-cover: https://images.unsplash.com/photo-1445294211564-3ca59d999abd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2800&h=550&q=80
+image: https://images.unsplash.com/photo-1445294211564-3ca59d999abd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2800&h=550&q=80
 ---
 
 

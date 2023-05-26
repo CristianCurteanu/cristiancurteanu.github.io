@@ -6,7 +6,7 @@ permalink: /blog/go/cond-struct
 description: "Take a look on an simple way to synchronize a custom made buffered structure, using Cond struct from Go standard library"
 categories: ["Golang"]
 tags: ["go", "golang", "concurrency", "cond", "synchronisation"]
-cover: https://images.unsplash.com/photo-1549367805-f0ae50e2cf38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&h=750&q=80
+image: https://images.unsplash.com/photo-1549367805-f0ae50e2cf38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&h=750&q=80
 ---
 
 

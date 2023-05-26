@@ -7,7 +7,7 @@ permalink: /blog/go/flyweight-
 description: "Here we will see how Flyweight design pattern can be implemented and used for solving real world problem"
 categories: ["Software engineering", "Golang"]
 tags: ["go", "golang", "flyweight", "design-patterns"]
-cover: https://images.unsplash.com/photo-1515339760107-1952b7a08454?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&h=750&q=80
+image: https://images.unsplash.com/photo-1515339760107-1952b7a08454?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&h=750&q=80
 ---
 
 

@@ -6,7 +6,7 @@ permalink: /blog/go/decorator-design-pattern
 description: "Here we will see how Decorator design pattern can be implemented and used for solving real world problem"
 categories: ["Software engineering", "Golang"]
 tags: ["go", "golang", "decorator", "design-patterns"]
-cover: https://images.unsplash.com/photo-1513593854556-94df5c54a8d6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&q=80
+image: https://images.unsplash.com/photo-1513593854556-94df5c54a8d6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&q=80
 ---
 
 

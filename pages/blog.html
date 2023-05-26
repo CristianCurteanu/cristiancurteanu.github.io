@@ -16,8 +16,8 @@ permalink: /blog/
     <div id="posts-container" class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 mt-[25pt]">
         {% for post in site.posts %}
             <div class="lg:flex"> 
-                {% if post.cover %}
-                    <img src="{{ post.cover }}" class="object-cover w-full h-56 rounded-lg lg:w-64" alt="">
+                {% if post.image %}
+                    <img src="{{ post.image }}" class="object-cover w-full h-56 rounded-lg lg:w-64" alt="">
 
                 {% endif %}
                 <div class="flex flex-col justify-between py-6 lg:mx-6">

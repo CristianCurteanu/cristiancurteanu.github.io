@@ -6,7 +6,7 @@ permalink: /blog/go/mutex-and-rwmutex
 description: "Have you ever experienced in memory race conditions in Golang? Here is how you can solve them, by using sync package"
 categories: ["Golang"]
 tags: ["go", "golang", "concurrency", "mutex", "race-condition"]
-cover: https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1800&h=850&q=80
+image: https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1800&h=850&q=80
 ---
 
 

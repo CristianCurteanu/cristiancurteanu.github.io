@@ -12,7 +12,7 @@ function renderPost(post) {
   // `
   return `
     <div class="lg:flex">
-      <img src="${ post.cover }" class="object-cover w-full h-56 rounded-lg lg:w-64" alt="">
+      <img src="${ post.image }" class="object-cover w-full h-56 rounded-lg lg:w-64" alt="">
       <div class="flex flex-col justify-between py-6 lg:mx-6">
           <a href="${post.url}" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
               ${ post.title }

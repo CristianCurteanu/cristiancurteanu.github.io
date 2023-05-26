@@ -6,7 +6,7 @@ permalink: /blog/js/fetch-api-alternative
 description: "Let's build a HTTP client library, similar to Fetch API function, on top of XMLHttpRequest"
 categories: ["JavaScript"]
 tags: ["js", "javascript", "http", "promises"]
-cover: https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&h=750&q=80
+image: https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1850&h=750&q=80
 ---
 
 

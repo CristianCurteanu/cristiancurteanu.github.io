@@ -10,9 +10,11 @@ image: https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?ixid=MXwxMjA
 ---
 
 
-When using `fetch` API function from the JS standard library, it annoys me every single time I want to process the response. So, I decided to create a wrapper for XMLHttpRequest prototype, which will make it simpler to handle the response, and will have similar interface with Fetch API (basically an alternative for Fetch API on top of XMLHttpRequest).
+**When using `fetch` API function from the JS standard library, it annoys me every single time I want to process the response. So, I decided to create a wrapper for XMLHttpRequest prototype, which will make it simpler to handle the response, and will have similar interface with Fetch API (basically an alternative for Fetch API on top of XMLHttpRequest).**
+{: .mt-10}
 
 ### Getting started
+{: .text-3xl.font-semibold.text-gray-700.leading-tight.mt-10.mb-5 }
 
 `XMLHttpRequest` provides quite a simple API for handling HTTP requests, even though is oriented on callbacks interface, that are responding for specific events, and provide data from response.
 

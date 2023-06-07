@@ -8,7 +8,7 @@ layout: default
         <div class="iZ8W30HPRQAuO6al90LU PojEYad6nPpbKmAUjVBI c1ibYmNHw6Cxfcu_pPgz veFXkDzfJN473U3ycrV8 RV8RoaI_SlEMC5CEQ3ms jCISvWkW5oStPH6Wrb_H HV01LldvyEqRHHy0hljF wfpSIkDBCpd44vEdymO_ BRg_hinIPYxGN5WJ_Xay KWb4ZbhYGt096ggQOJa_ Xjxpb8u_H96dZt4r1eF6">
             <span class="ttxtqsLWp2pFRX8yUvWd _9OKVeTXzfSwD_NYO6_G pDeChwIM17vwwm9ZmlIw">Published in 
                 {% for category in page.categories %}
-                    <a href="#" class="LYMps1kO2vF8HBymW3az wP9HMsqy6b96l2HBRbgb _5zvlMLkN1qETxEl3IhT">{{ category }}</a>
+                    <a href="/blog/?category={{ category | downcase | replace: " ", "-" }}" class="LYMps1kO2vF8HBymW3az wP9HMsqy6b96l2HBRbgb _5zvlMLkN1qETxEl3IhT">{{ category }}</a>
                 {% endfor %}
             </span>     
             <h1 class="_9OKVeTXzfSwD_NYO6_G I5nnt4bpo_o8qp1p2_FC _e063bssp_1bldcJ6kR0 P2kov_od1FPjxxII24T5 MxQqv3Z913orO6JQGGbH wP9HMsqy6b96l2HBRbgb fQ3UmoCh_2qglPqQf5CZ vAGTG1e_BcCgc9_9R6z3">{{ page.title }}</h1>
@@ -20,7 +20,7 @@ layout: default
         <article class="trp_bA_rt_zvxYf81Zkg jCISvWkW5oStPH6Wrb_H QFvy_qHEb4VhI8nsNH9k format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
             <div class="kqgYncRJQ7spwKfig6It BrSO24r_jx46AXZOyBJR aXohCatq2P98Q80o4vdb _T15kfOPGkvwZnqhqKce l0hZDMTUghc7ACx15hQU">
                 <div class="kqgYncRJQ7spwKfig6It neyUwteEn7DOg9pBSJJE B1cgbA6Bb4LQo0qFJKck K1PPCJwslha8GUIvV_Cr eCx_6PNzncAD5yo7Qcic osxEM2eQc4Pc_arzCZsv rD4HtsUG_hahmbh2Kj09 QTzX2Cr9jhY6WXuEsiB_">
-                    <span>By <a href="#" class="g3OYBOqwXUEW4dRGogkH a0Ed69aMSu0vgf4oysz0 _5zvlMLkN1qETxEl3IhT InmgdriTvIwr8C_lWYEj LYMps1kO2vF8HBymW3az">{{ site.title }}</a></span>
+                    <span>By <a href="/about" class="g3OYBOqwXUEW4dRGogkH a0Ed69aMSu0vgf4oysz0 _5zvlMLkN1qETxEl3IhT InmgdriTvIwr8C_lWYEj LYMps1kO2vF8HBymW3az">{{ site.title }}</a></span>
                     <span class="HqvWGMU4tAF6SCT7aaHM oa1vnmRHwGkKhMeo1olN eGLbGfR5AYzKjFKW_AQT Kj_JWX8VAGhGDhOAykml n8e6ORKgPTnY6zgs5HS7"></span>
                     <span><time class="oTkHpmOXEgQRdykOe3sq K1PPCJwslha8GUIvV_Cr eCx_6PNzncAD5yo7Qcic" pubdate="" datetime="2022-03-08" title="August 3rd, 2022">{{ page.date | date: "%-d %B %Y, %H:%M" }}</time></span>
                 </div>

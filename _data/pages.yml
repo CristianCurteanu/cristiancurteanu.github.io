@@ -3,7 +3,7 @@
   display: true
 - name: Projects
   path: /projects
-  display: true
+  display: false
 - name: About
   path: /about
   display: true

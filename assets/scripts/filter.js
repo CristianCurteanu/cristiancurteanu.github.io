@@ -57,12 +57,12 @@ ContentFilter.prototype.renderContent = function() {
 
 
 const button = document.querySelector('[data-collapse-toggle]');
-const menu = document.querySelector('#' + button.dataset.collapseToggle);
-
-
-button.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-});
+if (button) {
+  const menu = document.querySelector('#' + button.dataset.collapseToggle);
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+}
 
 
 (function () {

@@ -1,9 +1,9 @@
 
 var newsletterSubmitBtn = document.querySelector('button[data-subscription-input]')
 var newsletterEmailInput = document.getElementById(newsletterSubmitBtn.dataset['subscriptionInput'])
-var formSpinner = document.getElementById('subscription-success')
+var successMessage = document.getElementById('subscription-success')
 
-formSpinner.style.display = "none"
+successMessage.style.display = "none"
 
 newsletterSubmitBtn.addEventListener('click', async function(event) {
     event.preventDefault()
@@ -23,11 +23,11 @@ newsletterSubmitBtn.addEventListener('click', async function(event) {
         });
         newsletterEmailInput.value = ""
       } catch (error) {
-        formSpinner.style.display = "none"
+        successMessage.style.display = "none"
       } finally {
-        formSpinner.style.display = "inline-block"
+        successMessage.style.display = "inline-block"
         setTimeout(() => {
-          formSpinner.style.display = "none"
+          successMessage.style.display = "none"
         }, 3500)
       }
 })

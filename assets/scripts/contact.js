@@ -1,52 +1,38 @@
-let contactForm = document.getElementById("email-contact-form")
-let alertSuccess = document.getElementsByClassName("alert-success")[0]
-alertSuccess.style.display = "none"
+let successMessage = document.getElementById("contact-success")
+successMessage.style.display = "none"
 
-let formSpinner = document.getElementById("form-spinner")
-formSpinner.style.display = "none"
+let submitBtn = document.querySelector('button[data-contact="submit"]')
 
-let form = {
-  subject:   document.getElementById("contact-form_subject"),
-  sender:    document.getElementById("contact-form_email"),
-  content:   document.getElementById("contact-form_content"),
-  full_name: document.getElementById("contact-form_fullname")
-}
-
-document.getElementById("form-submit").addEventListener("click", async function(event) {
+submitBtn.addEventListener("click", async function(event) {
   event.preventDefault()
 
   let response = null
-  formSpinner.style.display = "inline-block"
-
   try {
-    response = await fetch(contactForm.getAttribute("action-url"), {
+    let data = {
+      fields: {
+        Email:   document.querySelector('input[data-contact="email"]').value,
+        Name:    document.querySelector('input[data-contact="name"]').value,
+        Message:   document.querySelector('textarea[data-contact="message"]').value,
+      }
+    }
+  debugger
+
+    response = await fetch("https://api.airtable.com/v0/appCDLZKbd7e0C9T2/Feedback", {
       method: 'POST',
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Request-Method": "post",
-        'Content-Type': 'application/json;charset=utf-8'
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer keymclD7OmM2sb4C8'
       },
-      body: JSON.stringify({
-              subject:   form.subject.value,
-              sender:    form.sender.value,
-              content:   form.content.value,
-              full_name: form.full_name.value
-            }),
+      body: JSON.stringify(data),
       mode: "cors"
     });
-    formSpinner.style.display = "none"
   } catch (error) {
-    formSpinner.style.display = "none"
-  }
-
-  try {
-    let data = await response.json();
-    if (data.status === "OK") {
-      alertSuccess.style.display = "block"
-      formSpinner.style.display = "none"
-    }
-    formSpinner.style.display = "none"
-  } catch (error) {
-    formSpinner.style.display = "none"
+    successMessage.style.display = "none"
+    console.log(error)
+  } finally {
+    successMessage.style.display = "inline-block"
+    setTimeout(() => {
+      successMessage.style.display = "none"
+    }, 3500)
   }
 })

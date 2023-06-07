@@ -1,6 +1,9 @@
 
 var newsletterSubmitBtn = document.querySelector('button[data-subscription-input]')
 var newsletterEmailInput = document.getElementById(newsletterSubmitBtn.dataset['subscriptionInput'])
+var formSpinner = document.getElementById('subscription-success')
+
+formSpinner.style.display = "none"
 
 newsletterSubmitBtn.addEventListener('click', async function(event) {
     event.preventDefault()
@@ -18,9 +21,13 @@ newsletterSubmitBtn.addEventListener('click', async function(event) {
           }),
           mode: "cors"
         });
-        // formSpinner.style.display = "none"
+        newsletterEmailInput.value = ""
       } catch (error) {
-        console.log(error)
-        // formSpinner.style.display = "none"
+        formSpinner.style.display = "none"
+      } finally {
+        formSpinner.style.display = "inline-block"
+        setTimeout(() => {
+          formSpinner.style.display = "none"
+        }, 3500)
       }
 })

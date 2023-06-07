@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Using Go Cond struct"
 date:   2021-01-11T18:52:59Z
 permalink: /blog/go/cond-struct

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Design patterns in Go: Decorator"
 date:   2021-01-09T16:41:59Z
 permalink: /blog/go/decorator-design-pattern

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Design patterns in Go: Abstract Factory"
 date:   2021-01-03T16:41:59Z
 permalink: /blog/go/abstract-factory-pattern

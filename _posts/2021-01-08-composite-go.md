@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Design patterns in Go: Composite"
 date:   2021-01-08T18:30:59Z
 permalink: /blog/go/composite-design-pattern

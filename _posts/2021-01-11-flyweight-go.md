@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Design patterns in Go: Flyweight"
 date: 2021-01-11T15:21:59Z
 permalink: /blog/go/flyweight-

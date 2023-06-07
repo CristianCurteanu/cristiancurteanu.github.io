@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Design patterns in Go: Factory Method"
 date:   2020-12-13T16:41:59Z
 permalink: /blog/go/factory-method-pattern

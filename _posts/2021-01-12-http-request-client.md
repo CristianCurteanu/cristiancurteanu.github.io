@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Create an alternative for Fetch API on top of XMLHttpRequest"
 date:   2021-01-12T13:12:59Z
 permalink: /blog/js/fetch-api-alternative

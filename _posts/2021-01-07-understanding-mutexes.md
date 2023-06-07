@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Mutexes and RWMutex in Golang"
 date: 2021-01-07T15:35:59Z
 permalink: /blog/go/mutex-and-rwmutex

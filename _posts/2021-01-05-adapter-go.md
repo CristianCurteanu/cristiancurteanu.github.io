@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tw_post
 title:  "Design patterns in Go: Adapter"
 date:   2021-01-06T16:41:59Z
 permalink: /blog/go/adapter-design-pattern
